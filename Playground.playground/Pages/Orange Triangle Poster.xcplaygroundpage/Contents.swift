@@ -16,7 +16,6 @@ let preferredHeight = 600
 import Cocoa
 import PlaygroundSupport
 import CanvasGraphics
-import CoreText
 
 // Create canvas
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
@@ -41,8 +40,9 @@ PlaygroundPage.current.liveView = canvas
  
  */
 
-// Show a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
+// Move the origin from the bottom-left corner of the canvas to it's centre point
+
+
 
 /*:
  ## Add your code
@@ -52,48 +52,44 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
-// Draw the background of the poster
-canvas.fillColor = .black
+// Begin writing your code below (you can remove the examples shown)
+// Draw Background
+let currentColorA  = Color(hue: 18,
+                          saturation: 100,
+                          brightness: 100,
+                          alpha: 100)
+canvas.fillColor = currentColorA
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
-
-// Draw the black circle on the poster
-canvas.fillColor = .yellow
-for verticalPosition in stride(from: 0,
-                through: 400,
-                by: 40){
-
-for horizontalPosition in stride(from: 0,
-                through: 400,
-                by: 40){
-    
-    canvas.drawEllipse(at: Point(x: horizontalPosition + 20, y: verticalPosition + 25), width: 40, height: 40)
-    }
-}
-
-// Draw the white circle on top of black circle
-//canvas.fillColor = .white
-//for verticalPosition in stride(from: 0,
-//                through: 400,
-  //              by: 40){
-
-//for horizontalPosition in stride(from: 0,
-    //            through: 400,
-    //            by: 40){
-    
-  //  canvas.drawEllipse(at: Point(x: horizontalPosition - 155, y: verticalPosition - 85), width: 40, height: 40)
-    
+// Add Text
+let currentColorB = Color(hue: 27,
+                          saturation: 7,
+                          brightness: 100,
+                          alpha: 100)
+canvas.textColor = currentColorB
+canvas.drawText(message: "talking heads", at: Point (x: 30, y: 145), size: 38, kerning : 0)
+canvas.drawText(message: "friday, saturday, sunday", at: Point (x: 20, y: 32), size: 8, kerning : 0)
+canvas.drawText(message: "september 12, 13, 14, 1975", at: Point (x: 20, y: 18), size: 8, kerning : 0)
+canvas.drawText(message: "at cbgb and omfug", at: Point (x: 150, y: 32), size: 8, kerning : 0)
+canvas.drawText(message: "315 bowery, new york city", at: Point (x: 150, y: 18), size: 8, kerning : 0)
+canvas.drawText(message: "also appearing:", at: Point (x: 280, y: 32), size: 8, kerning : 0)
+canvas.drawText(message: "from brooklyn, the shirts", at: Point (x: 280, y: 18), size: 8, kerning : 0)
 
 
-// Draw a new background to hide the top and bottom of the circle
-canvas.fillColor = .yellow
-canvas.drawRectangle(at: Point(x: 0, y: 428
-                              ), width: 400, height: 200)
 
-canvas.fillColor = .yellow
-canvas.drawRectangle(at: Point(x: 0, y: 0
-                              ), width: 400, height: 0)
 
+
+
+
+
+
+
+
+
+
+
+// Show a grid
+canvas.drawAxes(withScale: true, by: 50, color: .black)
 
 /*:
  ## Show the Live View

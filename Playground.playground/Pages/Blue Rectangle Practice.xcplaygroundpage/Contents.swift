@@ -52,6 +52,24 @@ canvas.drawAxes(withScale: true, by:50, color: .black)
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
+// Add the ability to draw a tilted rectangle to the Canvas structure
+extension Canvas{
+    func drawTiltedRectangle(xPosition: Int,
+                             yPosition: Int) ->
+    rectangleVerticles.append(Point(x: xPosition + 0,
+                                    y: yPosition + 30)) //A
+    rectangleVerticles.append(Point(x: xPosition + 20,
+                                    y: yPosition + 50))// B
+    rectangleVerticles.append(Point(x: xPosition + 50,
+                                    y: yPosition + 20))// C
+    rectangleVerticles.append(Point(x: xPosition + 30,
+                                    y: yPosition + 0)) // D
+    canvas.drawCustomShape(with: rectangleVerticles)
+    }
+
+}
+
+
 // Set fill and color
 canvas.drawShapesWithFill = true
 canvas.fillColor = .black
@@ -64,6 +82,7 @@ triangleVertices.append(Point(x: 50, y: 50))
 triangleVertices.append(Point(x: 25, y: 60))
 // 2. Tell the canvas object to draw the triangle
 canvas.drawCustomShape(with: triangleVertices)
+
 
 
 // Begin writing your code below (you can remove the examples shown)
@@ -81,18 +100,11 @@ for yPosition in stride(from: 0,
                        height: 5)
     
     // Draw tilted rectangle
-    canvas.fillColor = .blue
-    var rectangleVerticles: [Point] = []
-    rectangleVerticles.append(Point(x: xPosition + 0,
-                                    y: yPosition + 30)) //A
-    rectangleVerticles.append(Point(x: xPosition + 20,
-                                    y: yPosition + 50))// B
-    rectangleVerticles.append(Point(x: xPosition + 50,
-                                    y: yPosition + 20))// C
-    rectangleVerticles.append(Point(x: xPosition + 30,
-                                    y: yPosition + 0)) // D
-    canvas.drawCustomShape(with: rectangleVerticles)
-    
+    // Custom shape with relative co-ordinated
+    canvas.fillColor = .yellow
+            canvas.drawTiltedRectangle (xPosition: xPosition,
+                yPosition: yPosition)
+
     
     }
     
