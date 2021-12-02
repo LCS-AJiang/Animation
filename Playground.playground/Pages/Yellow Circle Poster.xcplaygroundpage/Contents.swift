@@ -52,13 +52,15 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
+canvas.highPerformance = false
+
 // Draw the background of the poster
 canvas.fillColor = .black
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 
 // Draw the black circle on the poster
-canvas.fillColor = .yellow
+canvas.fillColor = .green
 for verticalPosition in stride(from: 0,
                 through: 400,
                 by: 40){
@@ -71,18 +73,7 @@ for horizontalPosition in stride(from: 0,
     }
 }
 
-// Draw the white circle on top of black circle
-//canvas.fillColor = .white
-//for verticalPosition in stride(from: 0,
-//                through: 400,
-  //              by: 40){
 
-//for horizontalPosition in stride(from: 0,
-    //            through: 400,
-    //            by: 40){
-    
-  //  canvas.drawEllipse(at: Point(x: horizontalPosition - 155, y: verticalPosition - 85), width: 40, height: 40)
-    
 
 
 // Draw a new background to hide the top and bottom of the circle
@@ -94,7 +85,7 @@ canvas.fillColor = .yellow
 canvas.drawRectangle(at: Point(x: 0, y: 0
                               ), width: 400, height: 0)
 
-
+canvas.drawText(message: "talking heads", at: Point (x: 20, y: 460), size: 50, kerning : 0)
 
 /*:
  ## Show the Live View
