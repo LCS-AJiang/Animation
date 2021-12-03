@@ -82,3 +82,4 @@ for yPosition in stride(from: 0,
                        width: 5,
                        height: 5)
 }
+}
