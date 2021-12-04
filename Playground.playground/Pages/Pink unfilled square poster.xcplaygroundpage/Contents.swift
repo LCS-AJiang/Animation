@@ -63,11 +63,6 @@ canvas.fillColor = currentColorA
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
 
-
-
-
-
-
 canvas.drawShapesWithBorders = true
 canvas.drawShapesWithFill = false
 canvas.borderColor = .black
@@ -90,7 +85,6 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: 315, height: 315, anchoredBy:
 
 canvas.borderColor = .black
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 375, height: 375, anchoredBy: .centre, borderWidth: 15)
-
 
 
 canvas.borderColor = .black
