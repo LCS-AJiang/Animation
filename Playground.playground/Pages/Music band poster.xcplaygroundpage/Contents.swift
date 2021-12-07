@@ -54,7 +54,11 @@ canvas.drawAxes(withScale: true, by: 50, color: .black)
 
  */
 // Begin writing your code below (you can remove the examples shown)
-
+// Add text
+let currentColorC = Color .black
+canvas.textColor = currentColorC
+canvas.drawText(message: "WATER · GILMOUR · MASON · WRIGHT", at: Point (x: 20, y: 550), size: 8, kerning : 0)
+canvas.drawText(message: "august 19 1977", at: Point (x: 20, y: 535), size: 8, kerning : 0)
 
 /*:
  ## Show the Live View
