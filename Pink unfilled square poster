@@ -1,0 +1,138 @@
+// Begin writing your code below (you can remove the examples shown)
+// Draw Background
+let currentColorA  = Color(hue: 335,
+                          saturation: 95,
+                          brightness: 80,
+                          alpha: 100)
+canvas.fillColor = currentColorA
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
+
+
+canvas.drawShapesWithBorders = true
+canvas.drawShapesWithFill = false
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 15, height: 15, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 75, height: 75, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 135, height: 135, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 195, height: 195, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 255, height: 255, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 315, height: 315, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 375, height: 375, anchoredBy: .centre, borderWidth: 15)
+
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 0, y: 400), width: 15, height: 15, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 0, y: 400), width: 75, height: 75, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 0, y: 400), width: 135, height: 135, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 0, y: 400), width: 195, height: 195, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 0, y: 400), width: 255, height: 255, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 0, y: 400), width: 315, height: 315, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 0, y: 400), width: 375, height: 375, anchoredBy: .centre, borderWidth: 15)
+
+
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 400, y: 400), width: 15, height: 15, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 400, y: 400), width: 75, height: 75, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 400, y: 400), width: 135, height: 135, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 400, y: 400), width: 195, height: 195, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 400, y: 400), width: 255, height: 255, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 400, y: 400), width: 315, height: 315, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 400, y: 400), width: 375, height: 375, anchoredBy: .centre, borderWidth: 15)
+
+
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 400, y: 0), width: 15, height: 15, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 400, y: 0), width: 75, height: 75, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 400, y: 0), width: 135, height: 135, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 400, y: 0), width: 195, height: 195, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 400, y: 0), width: 255, height: 255, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 400, y: 0), width: 315, height: 315, anchoredBy: .centre, borderWidth: 15)
+
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 400, y: 0), width: 375, height: 375, anchoredBy: .centre, borderWidth: 15)
+
+
+
+//// Draw a Rectangle to hide the not needed square
+let currentColorD  = Color(hue: 335,
+                          saturation: 95,
+                          brightness: 80,
+                          alpha: 100)
+
+canvas.fillColor = currentColorD
+canvas.drawShapesWithFill = true
+canvas.drawShapesWithBorders = false
+
+canvas.drawRectangle(at: Point(x: 0, y: 400), width: 400, height: 200)
+
+// Add Text
+let currentColorB = Color(hue: 300,
+                          saturation: 5,
+                          brightness: 100,
+                          alpha: 100)
+canvas.textColor = currentColorB
+canvas.drawText(message: "the runaways", at: Point (x: 10, y: 410), size: 54, kerning : 0)
+
+let currentColorC = Color .black
+canvas.textColor = currentColorC
+canvas.drawText(message: "friday", at: Point (x: 20, y: 550), size: 8, kerning : 0)
+canvas.drawText(message: "august 19 1977", at: Point (x: 20, y: 535), size: 8, kerning : 0)
+canvas.drawText(message: "tickets $4.50", at: Point (x: 20, y: 520), size: 8, kerning : 0)
+canvas.drawText(message: "with", at: Point (x: 130, y: 550), size: 8, kerning : 0)
+canvas.drawText(message: "special guests", at: Point (x: 130, y: 535), size: 8, kerning : 0)
+canvas.drawText(message: "wolfgang", at: Point (x: 130, y: 520), size: 8, kerning : 0)
+canvas.drawText(message: "at ben h. lewis hall", at: Point (x: 293, y: 550), size: 8, kerning : 0)
+canvas.drawText(message: "special guests", at: Point (x: 293, y: 535), size: 8, kerning : 0)
+canvas.drawText(message: "wolfgang", at: Point (x: 293, y: 520), size: 8, kerning : 0)
+    
+
+// Show a grid
+canvas.drawAxes(withScale: true, by: 50, color: .black)
