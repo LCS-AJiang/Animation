@@ -53,48 +53,6 @@ PlaygroundPage.current.liveView = canvas
 
  */
 // Begin writing your code below (you can remove the examples shown)
-// Add a Background
-let currentColorA  = Color(hue: 200,
-                          saturation: 20,
-                          brightness: 40,
-                          alpha: 100)
-canvas.fillColor = currentColorA
-canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
-
-// Draw the loop of circle in the middle
-canvas.fillColor = .black
-canvas.borderColor = .white
-canvas.defaultLineWidth = 10
-canvas.drawShapesWithFill = true
-canvas.drawShapesWithBorders = true
-
-var tribertices: [Point] = []
-        tribertices.append(Point(x: 0, y: 120))
-        tribertices.append(Point(x: 400, y: 120))
-        tribertices.append(Point(x: 200, y: 470))
-        canvas.drawCustomShape(with: tribertices)
-
-let currentColorB = Color(hue: 241,
-                          saturation: 14,
-                          brightness: 100,
-                          alpha: 100)
-canvas.borderColor = currentColorB
-canvas.drawShapesWithBorders = true
-canvas.drawShapesWithFill = false
-for circle in stride(from: 200,
-                     through: 400,
-                     by: 60){
-    canvas.drawEllipse(at: Point(x: 200, y: 260), width: circle, height: circle)
-}
-
-canvas.drawShapesWithBorders = true
-canvas.drawShapesWithFill = false
-for circle in stride(from: 80,
-                     through: 180,
-                     by: 30){
-    canvas.drawEllipse(at: Point(x: 200, y: 260), width: circle, height: circle)
-}
-
 
 // Set up all the rainbow color
 let redline = Color(hue: 359,
@@ -133,34 +91,89 @@ let purpleline = Color(hue: 266,
                     alpha: 100)
 
 
+// Add a Background
+let currentColorA  = Color(hue: 200,
+                          saturation: 20,
+                          brightness: 40,
+                          alpha: 100)
+canvas.fillColor = currentColorA
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
+
 // Draw the top rainbow
 canvas.lineColor = redline
 canvas.defaultLineWidth = 10
-canvas.drawLine(from: Point(x: 0, y: 470), to: Point(x: 400, y: 470))
+canvas.drawLine(from: Point(x: 0, y: 470), to: Point(x: 200, y: 470))
 
 canvas.lineColor = orangeline
 canvas.defaultLineWidth = 10
-canvas.drawLine(from: Point(x: 0, y: 460), to: Point(x: 400, y: 460))
+canvas.drawLine(from: Point(x: 0, y: 460), to: Point(x: 200, y: 460))
 
 canvas.lineColor = yellowline
 canvas.defaultLineWidth = 10
-canvas.drawLine(from: Point(x: 0, y: 450), to: Point(x: 400, y: 450))
+canvas.drawLine(from: Point(x: 0, y: 450), to: Point(x: 200, y: 450))
 
 canvas.lineColor = greenline
 canvas.defaultLineWidth = 10
-canvas.drawLine(from: Point(x: 0, y: 440), to: Point(x: 400, y: 440))
+canvas.drawLine(from: Point(x: 0, y: 440), to: Point(x: 200, y: 440))
 
 canvas.lineColor = bluegreenline
 canvas.defaultLineWidth = 10
-canvas.drawLine(from: Point(x: 0, y: 430), to: Point(x: 400, y: 430))
+canvas.drawLine(from: Point(x: 0, y: 430), to: Point(x: 200, y: 430))
 
 canvas.lineColor = blueline
 canvas.defaultLineWidth = 10
-canvas.drawLine(from: Point(x: 0, y: 420), to: Point(x: 400, y: 420))
+canvas.drawLine(from: Point(x: 0, y: 420), to: Point(x: 200, y: 420))
 
 canvas.lineColor = purpleline
 canvas.defaultLineWidth = 10
-canvas.drawLine(from: Point(x: 0, y: 410), to: Point(x: 400, y: 410))
+canvas.drawLine(from: Point(x: 0, y: 410), to: Point(x: 200, y: 410))
+
+// Draw the axes
+canvas.drawAxes(withScale: true, by: 50, color: redline)
+//Draw the rainbow curve
+canvas.drawCurve(from: Point(x: 100, y: 600),
+                 to: Point(x: 150, y: 600),
+                 control1: Point(x: 200, y: 100),
+                 control2: Point(x: 250, y: 170),
+                 showControlPoints: true)
+
+// Draw the loop of circle in the middle
+let currentColorF  = Color(hue: 200,
+                          saturation: 20,
+                          brightness: 30,
+                          alpha: 100)
+canvas.fillColor = currentColorF
+canvas.borderColor = .white
+canvas.defaultBorderWidth = 10
+canvas.drawShapesWithFill = true
+canvas.drawShapesWithBorders = true
+var tribertices: [Point] = []
+        tribertices.append(Point(x: 0, y: 120))
+        tribertices.append(Point(x: 400, y: 120))
+        tribertices.append(Point(x: 200, y: 470))
+        canvas.drawCustomShape(with: tribertices)
+
+canvas.defaultBorderWidth = 1
+let currentColorB = Color(hue: 241,
+                          saturation: 14,
+                          brightness: 100,
+                          alpha: 100)
+canvas.borderColor = currentColorB
+canvas.drawShapesWithBorders = true
+canvas.drawShapesWithFill = false
+for circle in stride(from: 200,
+                     through: 400,
+                     by: 60){
+    canvas.drawEllipse(at: Point(x: 200, y: 260), width: circle, height: circle)
+}
+
+canvas.drawShapesWithBorders = true
+canvas.drawShapesWithFill = false
+for circle in stride(from: 80,
+                     through: 180,
+                     by: 30){
+    canvas.drawEllipse(at: Point(x: 200, y: 260), width: circle, height: circle)
+}
 
 
 // Draw the under text rainbow
@@ -202,6 +215,7 @@ canvas.drawText(message: "CARNEGIE HALL", at: Point (x: 68, y: 98), size: 30, ke
 canvas.drawText(message: "THE DARK SIDE OF THE MOON TOUR", at: Point(x: 18, y: 568), size: 20, kerning: 0)
 canvas.drawText(message: "PINK FLOYD", at: Point(x: 18, y: 508), size: 60, kerning: 0)
 canvas.drawText(message: "1972", at: Point(x: 148, y: 468), size: 40, kerning: 0)
+canvas.drawText(message: "MAY", at: Point(x: 73, y: 443), size: 30, kerning: 0)
 
 let currentColorD = Color .black
 canvas.textColor = currentColorD
@@ -209,8 +223,12 @@ canvas.drawText(message: "WATER · GILMOUR · MASON · WRIGHT", at: Point (x: 15
 canvas.drawText(message: "LIVE ON STAGE", at: Point (x: 10, y: 43), size: 50, kerning : 0)
 canvas.drawText(message: "CARNEGIE HALL", at: Point (x: 70, y: 100), size: 30, kerning : 0)
 canvas.drawText(message: "THE DARK SIDE OF THE MOON TOUR", at: Point(x: 20, y: 570), size: 20, kerning: 0)
+canvas.drawText(message: "MAY", at: Point(x: 75, y: 445), size: 30, kerning: 0)
 
-let currentColorE = Color . red
+let currentColorE = Color(hue: 355,
+                          saturation: 100,
+                          brightness: 65,
+                          alpha: 100)
 canvas.textColor = currentColorE
 canvas.drawText(message: "PINK FLOYD", at: Point(x: 20, y: 510), size: 60, kerning: 0)
 canvas.drawText(message: "1972", at: Point(x: 150, y: 470), size: 40, kerning: 0)
