@@ -131,10 +131,53 @@ canvas.drawLine(from: Point(x: 0, y: 410), to: Point(x: 200, y: 410))
 // Draw the axes
 canvas.drawAxes(withScale: true, by: 50, color: redline)
 //Draw the rainbow curve
-canvas.drawCurve(from: Point(x: 100, y: 600),
-                 to: Point(x: 150, y: 600),
-                 control1: Point(x: 200, y: 100),
-                 control2: Point(x: 250, y: 170),
+canvas.lineColor = redline
+canvas.drawCurve(from: Point(x: 200, y: 470),
+                 to: Point(x: 250, y: 610),
+                 control1: Point(x: 320, y: 470),
+                 control2: Point(x: 350, y: 550),
+                 showControlPoints: true)
+
+canvas.lineColor = orangeline
+canvas.drawCurve(from: Point(x: 200, y: 460),
+                 to: Point(x: 260, y: 610),
+                 control1: Point(x: 320, y: 460),
+                 control2: Point(x: 350, y: 550),
+                 showControlPoints: true)
+
+canvas.lineColor = yellowline
+canvas.drawCurve(from: Point(x: 200, y: 450),
+                 to: Point(x: 270, y: 610),
+                 control1: Point(x: 320, y: 450),
+                 control2: Point(x: 350, y: 550),
+                 showControlPoints: true)
+
+canvas.lineColor = greenline
+canvas.drawCurve(from: Point(x: 200, y: 440),
+                 to: Point(x: 280, y: 610),
+                 control1: Point(x: 320, y: 440),
+                 control2: Point(x: 350, y: 550),
+                 showControlPoints: true)
+
+canvas.lineColor = bluegreenline
+canvas.drawCurve(from: Point(x: 200, y: 430),
+                 to: Point(x: 290, y: 610),
+                 control1: Point(x: 320, y: 430),
+                 control2: Point(x: 350, y: 550),
+                 showControlPoints: true)
+
+canvas.lineColor = blueline
+canvas.drawCurve(from: Point(x: 200, y: 420),
+                 to: Point(x: 300, y: 610),
+                 control1: Point(x: 320, y: 420),
+                 control2: Point(x: 350, y: 550),
+                 showControlPoints: true)
+
+canvas.lineColor = purpleline
+canvas.drawCurve(from: Point(x: 200, y: 410),
+                 to: Point(x: 310, y: 610),
+                 control1: Point(x: 320, y: 410),
+                 control2: Point(x: 350, y: 550),
                  showControlPoints: true)
 
 // Draw the loop of circle in the middle
@@ -175,6 +218,26 @@ for circle in stride(from: 80,
     canvas.drawEllipse(at: Point(x: 200, y: 260), width: circle, height: circle)
 }
 
+// Draw detailed circle in between the triangle
+
+
+// Lines in between the triangle
+canvas.lineColor = .white
+canvas.defaultLineWidth = 2
+canvas.drawLine(from: Point(x: 197, y: 128),
+                to: Point(x: 197, y: 468))
+canvas.drawLine(from: Point(x: 203, y: 128),
+                to: Point(x: 203, y: 468))
+
+canvas.drawLine(from: Point(x: 76, y: 254),
+                to: Point(x: 400, y: 124))
+canvas.drawLine(from: Point(x: 74, y: 248),
+                to: Point(x: 394, y: 120))
+
+canvas.drawLine(from: Point(x: 0, y: 119),
+                to: Point(x: 326, y: 248))
+canvas.drawLine(from: Point(x: 0, y: 125),
+                to: Point(x: 326, y: 254))
 
 // Draw the under text rainbow
 canvas.lineColor = redline
@@ -216,6 +279,9 @@ canvas.drawText(message: "THE DARK SIDE OF THE MOON TOUR", at: Point(x: 18, y: 5
 canvas.drawText(message: "PINK FLOYD", at: Point(x: 18, y: 508), size: 60, kerning: 0)
 canvas.drawText(message: "1972", at: Point(x: 148, y: 468), size: 40, kerning: 0)
 canvas.drawText(message: "MAY", at: Point(x: 73, y: 443), size: 30, kerning: 0)
+canvas.drawText(message: "1st", at: Point(x: 78, y: 413), size: 30, kerning: 0)
+canvas.drawText(message: "NEW", at: Point(x: 298, y: 413), size: 30, kerning: 0)
+canvas.drawText(message: "YORK", at: Point(x: 288, y: 378), size: 30, kerning: 0)
 
 let currentColorD = Color .black
 canvas.textColor = currentColorD
@@ -224,6 +290,9 @@ canvas.drawText(message: "LIVE ON STAGE", at: Point (x: 10, y: 43), size: 50, ke
 canvas.drawText(message: "CARNEGIE HALL", at: Point (x: 70, y: 100), size: 30, kerning : 0)
 canvas.drawText(message: "THE DARK SIDE OF THE MOON TOUR", at: Point(x: 20, y: 570), size: 20, kerning: 0)
 canvas.drawText(message: "MAY", at: Point(x: 75, y: 445), size: 30, kerning: 0)
+canvas.drawText(message: "1st", at: Point(x: 80, y: 415), size: 30, kerning: 0)
+canvas.drawText(message: "NEW", at: Point(x: 300, y: 415), size: 30, kerning: 0)
+canvas.drawText(message: "YORK", at: Point(x: 290, y: 380), size: 30, kerning: 0)
 
 let currentColorE = Color(hue: 355,
                           saturation: 100,
