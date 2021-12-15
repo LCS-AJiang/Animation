@@ -39,11 +39,10 @@ PlaygroundPage.current.liveView = canvas
  If you do not wish to see a grid, comment out the code on line 48.
  
  */
+// Show a grid
+canvas.drawAxes(withScale: true, by: 50, color: .black)
 
 // Move the origin from the bottom-left corner of the canvas to it's centre point
-
-
-
 /*:
  ## Add your code
  
@@ -180,6 +179,12 @@ canvas.drawCurve(from: Point(x: 200, y: 410),
                  control2: Point(x: 350, y: 550),
                  showControlPoints: true)
 
+// Color of loop of circle
+let currentColorB = Color(hue: 241,
+                          saturation: 14,
+                          brightness: 100,
+                          alpha: 100)
+
 // Draw the loop of circle in the middle
 let currentColorF  = Color(hue: 200,
                           saturation: 20,
@@ -197,10 +202,6 @@ var tribertices: [Point] = []
         canvas.drawCustomShape(with: tribertices)
 
 canvas.defaultBorderWidth = 1
-let currentColorB = Color(hue: 241,
-                          saturation: 14,
-                          brightness: 100,
-                          alpha: 100)
 canvas.borderColor = currentColorB
 canvas.drawShapesWithBorders = true
 canvas.drawShapesWithFill = false
@@ -219,7 +220,35 @@ for circle in stride(from: 80,
 }
 
 // Draw detailed circle in between the triangle
+canvas.defaultLineWidth = 1
+canvas.borderColor = currentColorB
+canvas.drawShapesWithFill = false
+canvas.drawShapesWithBorders = true
+canvas.drawEllipse(at: Point(x: 200, y: 370), width: 100, height: 100)
+canvas.drawEllipse(at: Point(x: 86, y: 170), width: 100, height: 100)
+canvas.drawEllipse(at: Point(x: 315, y: 170), width: 100, height: 100)
+canvas.drawEllipse(at: Point(x: 80, y: 220), width: 40, height: 40)
+canvas.drawEllipse(at: Point(x: 240, y: 290), width: 40, height: 40)
+canvas.drawEllipse(at: Point(x: 175, y: 160), width: 40, height: 40)
+canvas.drawEllipse(at: Point(x: 105, y: 350), width: 40, height: 40)
+canvas.drawEllipse(at: Point(x: 320, y: 310), width: 40, height: 40)
 
+canvas.defaultBorderWidth = 2
+canvas.borderColor = currentColorB
+canvas.drawShapesWithFill = false
+canvas.drawShapesWithBorders = true
+canvas.drawEllipse(at: Point(x: 200, y: 260), width: 60, height: 60)
+canvas.drawEllipse(at: Point(x: 200, y: 260), width: 50, height: 50)
+
+// Draw the up side down triangle in the big triangle
+canvas.borderColor = .white
+canvas.drawShapesWithFill = false
+canvas.drawShapesWithBorders = true
+var tribertices2: [Point] = []
+        tribertices2.append(Point(x: 200, y: 120))
+        tribertices2.append(Point(x: 100, y: 300))
+        tribertices2.append(Point(x: 300, y: 300))
+        canvas.drawCustomShape(with: tribertices2)
 
 // Lines in between the triangle
 canvas.lineColor = .white
@@ -301,9 +330,6 @@ let currentColorE = Color(hue: 355,
 canvas.textColor = currentColorE
 canvas.drawText(message: "PINK FLOYD", at: Point(x: 20, y: 510), size: 60, kerning: 0)
 canvas.drawText(message: "1972", at: Point(x: 150, y: 470), size: 40, kerning: 0)
-
-// Show a grid
-canvas.drawAxes(withScale: true, by: 50, color: .black)
 /*:
  ## Show the Live View
  Don't see any results?
