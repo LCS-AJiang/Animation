@@ -43,6 +43,9 @@ PlaygroundPage.current.liveView = canvas
 canvas.drawAxes(withScale: true, by: 50, color: .black)
 
 // Move the origin from the bottom-left corner of the canvas to it's centre point
+
+//// Draw the axes
+//canvas.drawAxes(withScale: true, by: 50, color: redline)
 /*:
  ## Add your code
  
@@ -127,65 +130,57 @@ canvas.lineColor = purpleline
 canvas.defaultLineWidth = 10
 canvas.drawLine(from: Point(x: 0, y: 410), to: Point(x: 200, y: 410))
 
-// Draw the axes
-canvas.drawAxes(withScale: true, by: 50, color: redline)
 //Draw the rainbow curve
 canvas.lineColor = redline
 canvas.drawCurve(from: Point(x: 200, y: 470),
                  to: Point(x: 250, y: 610),
                  control1: Point(x: 320, y: 470),
                  control2: Point(x: 350, y: 550),
-                 showControlPoints: true)
+                 showControlPoints: false)
 
 canvas.lineColor = orangeline
 canvas.drawCurve(from: Point(x: 200, y: 460),
                  to: Point(x: 260, y: 610),
                  control1: Point(x: 320, y: 460),
                  control2: Point(x: 350, y: 550),
-                 showControlPoints: true)
+                 showControlPoints: false)
 
 canvas.lineColor = yellowline
 canvas.drawCurve(from: Point(x: 200, y: 450),
                  to: Point(x: 270, y: 610),
                  control1: Point(x: 320, y: 450),
                  control2: Point(x: 350, y: 550),
-                 showControlPoints: true)
+                 showControlPoints: false)
 
 canvas.lineColor = greenline
 canvas.drawCurve(from: Point(x: 200, y: 440),
                  to: Point(x: 280, y: 610),
                  control1: Point(x: 320, y: 440),
                  control2: Point(x: 350, y: 550),
-                 showControlPoints: true)
+                 showControlPoints: false)
 
 canvas.lineColor = bluegreenline
 canvas.drawCurve(from: Point(x: 200, y: 430),
                  to: Point(x: 290, y: 610),
                  control1: Point(x: 320, y: 430),
                  control2: Point(x: 350, y: 550),
-                 showControlPoints: true)
+                 showControlPoints: false)
 
 canvas.lineColor = blueline
 canvas.drawCurve(from: Point(x: 200, y: 420),
                  to: Point(x: 300, y: 610),
                  control1: Point(x: 320, y: 420),
                  control2: Point(x: 350, y: 550),
-                 showControlPoints: true)
+                 showControlPoints: false)
 
 canvas.lineColor = purpleline
 canvas.drawCurve(from: Point(x: 200, y: 410),
                  to: Point(x: 310, y: 610),
                  control1: Point(x: 320, y: 410),
                  control2: Point(x: 350, y: 550),
-                 showControlPoints: true)
+                 showControlPoints: false)
 
-// Color of loop of circle
-let currentColorB = Color(hue: 241,
-                          saturation: 14,
-                          brightness: 100,
-                          alpha: 100)
-
-// Draw the loop of circle in the middle
+// Draw the big triangle in the middle of the poster
 let currentColorF  = Color(hue: 200,
                           saturation: 20,
                           brightness: 30,
@@ -201,6 +196,13 @@ var tribertices: [Point] = []
         tribertices.append(Point(x: 200, y: 470))
         canvas.drawCustomShape(with: tribertices)
 
+// Color of loop of circle
+let currentColorB = Color(hue: 241,
+                          saturation: 14,
+                          brightness: 100,
+                          alpha: 100)
+
+// Draw the loop of circle in the middle
 canvas.defaultBorderWidth = 1
 canvas.borderColor = currentColorB
 canvas.drawShapesWithBorders = true
